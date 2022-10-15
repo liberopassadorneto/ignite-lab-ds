@@ -13,12 +13,10 @@ module.exports = {
     storyStoreV7: true,
   },
 
-  //* Se sua aplicação for deployada dentro de uma organização, você deve adicionar o nome da organização no path
-
-  // viteFinal: (config, { configType }) => {
-  //   if (configType === "PRODUCTION") {
-  //     config.base = "/ignite-lab-ds/";
-  //   }
-  //   return config;
-  // },
+  viteFinal: (config, { configType }) => {
+    if (configType === "PRODUCTION") {
+      config.base = "/ignite-lab-ds/";
+    }
+    return config;
+  },
 };
